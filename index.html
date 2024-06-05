@@ -4,7 +4,17 @@
     <meta charset="UTF-8">
     <title>Эмоциональное выгорание</title>
     <style>
-        
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -14,64 +24,69 @@
             padding: 0;
             text-align: center;
         }
-        tr{
+        tr {
             height: 5px;
         }
-        p,h2{
+        h3 {
+            margin:auto; 
             text-align: center;
         }
         .test {
             text-align: center;
-            width: 100%;
+            width: 600px;
             height: 100%;
             background-color: #f3f3f3;
             border: 1px solid black;
-            
+            margin-top: 20px;
         }
-        button{
+        button {
             width: 25%;
             height: 40px;
             padding: 0;
-            margin: 0; 
-            
-
+            margin: 0;
         }
         form {
             display: flex; 
             justify-content: center;
         }
-        progress{
-
-            border: 1;
+        progress {
             width: 90%;
-
-            transition: width 0.5s; 
+            height: 20px;
+            border: 1px solid #000;
             appearance: none;
-
+            margin: 5px; 
+        }
+        progress::-webkit-progress-bar {
+            background-color: #ffffff;
+        }
+        progress::-webkit-progress-value {
+            background-color: #af4c8e;
         }
     </style>
 </head>
 <body>
-    <h2>Узнайте, имеется ли у вас синдром эмоционального выгорания?</h2>
-    <p>Пройдите анонимный тест.</p>
+    <h3>Узнайте, имеется ли у вас синдром эмоционального выгорания?</h3>
+    <h3>Пройдите анонимный тест.</h3>
     <br><br>
-    <div class="test">
-        <table>
-            <tr>
-                <progress  id="progressbar" value="1" max="84"></progress>
-            </tr>
-            <tr>
-                <td>Тут будет json file </td>
-            </tr>
-            <tr>
-                <td>
-                    <form>
-                        <button name="btn_yes"  >Да</button>
-                        <button name="btn_no">Нет</button>
-                    </form>
-                </td>
-            </tr>
-        </table>
+    <div class="content">
+        <div class="test">
+            <table>
+                <tr>
+                    <progress id="progressbar" value="3" max="84"></progress>
+                </tr>
+                <tr>
+                    <td>Тут будет json file </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <button name="btn_yes">Да</button>
+                            <button name="btn_no">Нет</button>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 </body>
 </html>
